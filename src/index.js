@@ -2,8 +2,9 @@
 
 require("./styles.scss");
 
-const {Elm} = require('./Main');
-var app = Elm.Main.init({flags: 6});
+const {Elm} = require('./PhotoGroove.elm');
+var root = document.getElementById("app");
+var app = Elm.PhotoGroove.init({node: root});
 
 app.ports.toJs.subscribe(data => {
     console.log(data);
